@@ -25,7 +25,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
   const initialGuess = generateRandomBetween(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
   const [guessRounds, setGuessRounds] = useState([initialGuess]);
- 
+
   const guessRoundListLength = guessRounds.length;
 
   useEffect(() => {
@@ -66,7 +66,6 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     setCurrentGuess(newNumber);
     setGuessRounds((prevGuessRounds) => [newNumber, ...prevGuessRounds]);
   };
-
 
   return (
     <View style={styles.screen}>
@@ -112,6 +111,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 12,
+    alignItems: 'center',
   },
   buttonsContainer: {
     flexDirection: 'row',
