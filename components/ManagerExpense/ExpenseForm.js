@@ -82,7 +82,7 @@ const ExpenseForm = ({ isEditing, onSubmit, onCancel, defaultValues }) => {
           label="Date"
           invalid={!inputs.date.isValid}
           textInputConfig={{
-            placeHolder: 'YYYY-MM-DD',
+            placeholder: 'YYYY-MM-DD',
             maxLength: 10,
             onChangeText: () => {},
             onChangeText: inputChangedHandler.bind(this, 'date'),
